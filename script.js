@@ -1,8 +1,8 @@
 // Random Damage
-const randomDamage = _ => [Math.floor(Math.random() * 10 + 1)]
+const randomDamage = _ => Math.floor(Math.random() * 10) + 1
 // Choose Option
 const chooseOption = (opt1, opt2) => {
-    let randNum = [Math.floor(Math.random() * 2)];
+    let randNum = Math.floor(Math.random() * 2);
     return randNum === 0 ? opt1 : opt2;
 }
 // Attack Player
@@ -38,7 +38,7 @@ function fight(player1, player2, player1Health, player2Health) {
             logHealth(player1, player1Health);
             isDead(player1Health)
             if (isDead(player1Health)) {
-                logDeath(player1, player2);
+                logDeath(player2, player1);
                 break;
             }
         }
