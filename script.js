@@ -6,7 +6,7 @@ const chooseOption = (opt1, opt2) => {
     return randNum === 0 ? opt1 : opt2;
 }
 // Attack Player
-const attackPlayer = (health) => {
+const attackPlayer = function (health) {
     return (health - randomDamage())
 }
 // Log Health
